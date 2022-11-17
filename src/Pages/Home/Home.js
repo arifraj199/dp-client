@@ -1,4 +1,6 @@
 import React from "react";
+import DentalCare from "./DentalCare";
+import Service from "./Service";
 import ToolHelp from "./ToolHelp";
 
 const Home = () => {
@@ -43,6 +45,8 @@ const Home = () => {
       </div>
       <ToolHelp></ToolHelp>
     </div>
+    <Service></Service>
+    <DentalCare></DentalCare>
     </div>
   );
 };
