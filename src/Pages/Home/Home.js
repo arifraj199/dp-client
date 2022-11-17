@@ -1,6 +1,9 @@
 import React from "react";
+import Contact from "../Contact/Contact";
+import BannerAppointment from "./BannerAppointment";
 import DentalCare from "./DentalCare";
 import Service from "./Service";
+import Testimonial from "./Testimonial";
 import ToolHelp from "./ToolHelp";
 
 const Home = () => {
@@ -47,6 +50,10 @@ const Home = () => {
     </div>
     <Service></Service>
     <DentalCare></DentalCare>
+    <BannerAppointment></BannerAppointment>
+    <Testimonial></Testimonial>
+    <Contact></Contact>
+  
     </div>
   );
 };
