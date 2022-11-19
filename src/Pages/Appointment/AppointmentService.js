@@ -1,15 +1,28 @@
 import React from "react";
-import Button from "../Shared/Button/Button";
 
 const AppointmentService = ({ service }) => {
-  let availableSpace = service.slots.length;
+  const { name, slots } = service;
+  let availableSpace = slots.length;
   console.log(availableSpace);
   return (
     <div className="shadow-lg p-8 rounded-2xl">
-      <h2 className="text-secondary text-xl font-semibold">{service.name}</h2>
-      <p className="my-1">{service.slots[0]}</p>
-      <p className="mb-1">{availableSpace} Space Available</p>
-      <Button>Book Appointment</Button>
+      <h2 className="text-secondary text-xl font-semibold">{name}</h2>
+      <p className="my-1">
+        {availableSpace > 0 ? (
+          <span>{slots[0]}</span>
+        ) : (
+          <span className="text-red-500">Try Another Date</span>
+        )}
+      </p>
+      <p className="mb-1">
+        {availableSpace} {availableSpace > 1 ? "Spaces" : "Space"} Available
+      </p>
+      <button
+        disabled={availableSpace === 0}
+        className="btn bg-[linear-gradient(#1AD8B2,#0FCFEC)] text-white border-none"
+      >
+        Book Appointment
+      </button>
     </div>
   );
 };

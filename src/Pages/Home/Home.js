@@ -38,7 +38,7 @@ const Home = () => {
               style={{
                 backgroundImage: "linear-gradient(#1AD8B2,#0FCFEC)",
               }}
-              className="btn btn-primary text-white"
+              className="btn btn-primary text-white "
             >
               Get Started
             </button>
